@@ -9,7 +9,7 @@ const usersStore = {
 		},
 	},
 	getters: {
-		users: ({ list }) => Object.values(list),
+		usersList: (state) => Object.values(state.list),
 	},
 	mutations: {},
 	actions: {},

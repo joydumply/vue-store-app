@@ -5,11 +5,14 @@ defineProps({
 		required: true,
 	},
 });
-import { useStore } from 'vuex';
+import { computed } from 'vue';
+import { useStore, mapGetters } from 'vuex';
+
 const store = useStore();
-console.log(store.state);
+const usersList = computed(() => store.getters['usersStore/usersList']);
 </script>
 
 <template>
 	<div>Helllo</div>
+	{{ usersList }}
 </template>
